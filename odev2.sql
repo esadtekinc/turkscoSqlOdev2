@@ -6,8 +6,7 @@ Where invoice IS NULL;
 
 Select * ,total as old_total, total * 2 as new_total
 From invoice;
--- invoice tablosundali total ifadesini old_total(eski toplam)
--- olarak değiştirdim ve totali 2 ile çarpıp yeni total adlı yen bir sütun ekledim
+-- invoice tablosundali total ifadesini old_total(eski toplam) olarak değiştirdim ve totali 2 ile çarpıp yeni total adlı yen bir sütun ekledim
 
 SELECT 
   billing_address,
@@ -17,7 +16,5 @@ WHERE
   EXTRACT(YEAR FROM invoice_date) = 2013 AND
   EXTRACT(MONTH FROM invoice_date) = 8;
 
-  -- left ve right komutları ile istenilen karakterleri getirip birleştirme 
-  -- operatörü ile birleştirip açık adres adını verdim
-  -- where komutu ile extract kmutunu birlikte kullanıp istenilen tarihi seçtim
+  -- left ve right komutları ile istenilen karakterleri getirip birleştirme  operatörü ile birleştirip açık adres adını verdim where komutu ile extract kmutunu birlikte kullanıp istenilen tarihi seçtim
   -- ve 2013 yılı ağustos ayındaki fatura adresslerini yeni yaptığım açık adres sütunu ile yazdırdım
